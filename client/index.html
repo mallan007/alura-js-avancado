@@ -60,10 +60,10 @@
     </table>
     <script src="js/app/models/Negociacao.js"></script>
     <script>
-        var n1 = new Negociacao (new Date(), 10, 50.50);
-        var volume = n1.obterVolume();
+        let n1 = new Negociacao (new Date(), 10, 50.50); //'let' só existe no bloco em que foi declarada
+ 
         console.log("Negociação: ");
-        console.log("| Data: "+ n1.getData(), "| Quantidade: " +n1.getQuantidade(), "| Valor: " + n1.getValor(), "| Volume: " + volume, "|");
+        console.log("| Data: "+ n1.data, "| Quantidade: " +n1.quantidade, "| Valor: " + n1.valor, "| Volume: " + n1.volume, "|");
 
     </script>
 </body>
