@@ -1,11 +1,9 @@
-class NegociacoesView {
+class NegociacoesView extends View {
 
     constructor(elemento) {
-
-        this._elemento = elemento;
+        super(elemento);
     }
-
-    _template( model ) {
+    template( model ) {
         return `
         <table class="table table-hover table-bordered">
             <thead>
@@ -38,10 +36,6 @@ class NegociacoesView {
             </table>  `;
     }//Join concatena todas as strings em uma única. Ao invés de criar um array para ser exibida na tela.
 
-    update(model) {
-        this._elemento.innerHTML = this._template(model); //innerHTML pega a String e converte-a em HTML e atribui ao elemento do DOM.
-
-    }
 }
 /*
  ls 33 a 38 : Immediately-invoked function expression (IIFE) ou a função imediata.
